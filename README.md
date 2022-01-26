@@ -22,7 +22,7 @@ A smart contract to buy NFT for ERC20 token
 - Listing includes a price in ERC20 token
 - Customers can buy one of the offered NFTs for ERC20 token
 
-[Back To The Top](#bank-smart-contract-mocha/chai-tests)
+[Back To The Top](#nft-trader-smart-contract)
 
 ---
 
@@ -76,7 +76,7 @@ A smart contract to buy NFT for ERC20 token
 ![token JSON](https://i.imgur.com/yG2QWwK.png)
 ![token img](https://i.imgur.com/mkaYxCO.png)
 
-[Back To The Top](#bank-smart-contract-mocha/chai-tests)
+[Back To The Top](#nft-trader-smart-contract)
 
 ---
 
@@ -87,4 +87,4 @@ A smart contract to buy NFT for ERC20 token
 - GitLab - [@taranchik](https://gitlab.com/taranchik)
 - Twitter - [@viataranushenko](https://twitter.com/viataranushenko)
 
-[Back To The Top](#bank-smart-contract-mocha/chai-tests)
+[Back To The Top](#nft-trader-smart-contract)
