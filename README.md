@@ -17,8 +17,9 @@
 ## Description
 
 A smart contract to buy NFT for ERC20 token
+
 - Shop owner (smart contract owner) has ability to submit new offers of NFTs (ERC 721) that he is owner of
-- Listing includes a price in ERC20 token 
+- Listing includes a price in ERC20 token
 - Customers can buy one of the offered NFTs for ERC20 token
 
 [Back To The Top](#bank-smart-contract-mocha/chai-tests)
@@ -66,6 +67,14 @@ A smart contract to buy NFT for ERC20 token
 ![ERC20 balance](https://i.imgur.com/3TLSY4W.png)
 ![NFT balance](https://i.imgur.com/AO9fpHV.png)
 ![null pointer to seller](https://i.imgur.com/WqcQ1VD.png)
+
+### Check NFT data
+
+1. Check token URI in the NftTrader contract
+
+![token URI](https://i.imgur.com/9wwRsJH.png)
+![token JSON](https://i.imgur.com/yG2QWwK.png)
+![token img](https://i.imgur.com/mkaYxCO.png)
 
 [Back To The Top](#bank-smart-contract-mocha/chai-tests)
 
