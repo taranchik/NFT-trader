@@ -33,7 +33,7 @@ contract NftTrader {
         );
         require(
             NFTtoken.isApprovedForAll(msg.sender, address(this)),
-            "Smart contract must be approved"
+            "NFT: Smart contract must be approved"
         );
 
         listingNFTs[NFTcontractAddr][tokenId] = Listing(
@@ -43,16 +43,22 @@ contract NftTrader {
         );
     }
 
-    function purchase(address NFTcontractAddr, uint256 tokenId) public payable {
+    function purchase(address NFTcontractAddr, uint256 tokenId) public {
         Listing memory item = listingNFTs[NFTcontractAddr][tokenId];
 
         require(item.seller != msg.sender, "Seller can not purchase own NFT");
         require(item.seller != address(0), "NFT in not on sale");
+        require(
+            item.ERC20token.allowance(msg.sender, address(this)) >= item.price,
+            "ERC20: Smart contract must be approved"
+        );
 
-        ERC721 token = ERC721(NFTcontractAddr);
-
+        ERC721(NFTcontractAddr).safeTransferFrom(
+            item.seller,
+            msg.sender,
+            tokenId
+        );
         item.ERC20token.transferFrom(msg.sender, item.seller, item.price);
-        token.safeTransferFrom(item.seller, msg.sender, tokenId);
 
         listingNFTs[NFTcontractAddr][tokenId].seller = address(0);
     }
