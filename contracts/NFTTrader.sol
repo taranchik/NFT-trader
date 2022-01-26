@@ -10,6 +10,7 @@ contract NftTrader {
 
     struct Listing {
         CustomERC20 ERC20token;
+        string tokenName;
         uint256 price;
         address seller;
     }
@@ -38,6 +39,7 @@ contract NftTrader {
 
         listingNFTs[NFTcontractAddr][tokenId] = Listing(
             ERC20token,
+            ERC20token.name(),
             price,
             address(msg.sender)
         );
